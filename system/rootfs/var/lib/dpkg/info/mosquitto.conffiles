@@ -1,0 +1,6 @@
+/etc/init.d/mosquitto
+/etc/logrotate.d/mosquitto
+/etc/mosquitto/ca_certificates/README
+/etc/mosquitto/certs/README
+/etc/mosquitto/conf.d/README
+/etc/mosquitto/mosquitto.conf

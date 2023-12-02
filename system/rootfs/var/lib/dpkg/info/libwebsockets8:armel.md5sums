@@ -1,0 +1,5 @@
+6b09ad33928b401ed69a241493ae56c9  usr/lib/arm-linux-gnueabi/libwebsockets.so.8
+2f700b235e693b81b737ee5823809f70  usr/share/doc/libwebsockets8/changelog.Debian.gz
+5df33ef3c332d15e4f5b70c9cc07a74f  usr/share/doc/libwebsockets8/changelog.gz
+4b116820780fcc0b4adf2039337fc7fc  usr/share/doc/libwebsockets8/copyright
+31bcdc7a1245bcbdfd52307853e606ab  usr/share/lintian/overrides/libwebsockets8

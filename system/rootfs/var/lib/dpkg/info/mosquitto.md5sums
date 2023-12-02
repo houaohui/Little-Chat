@@ -1,0 +1,17 @@
+cf542fdaba873e97d0da9a4aa4324542  lib/systemd/system/mosquitto.service
+a05093bdf8581cc63e139c8925b1cac5  usr/bin/mosquitto_passwd
+bf19ad8d1b6e53f7dfec8825ce8e2699  usr/sbin/mosquitto
+bee651702fd086ef054e2d5577c37fb2  usr/share/doc/mosquitto/README.Debian
+9569b3118e148a33d71eb7d54af753c2  usr/share/doc/mosquitto/changelog.Debian.gz
+39cf3422599296e6db6204f9841ee1c8  usr/share/doc/mosquitto/changelog.gz
+93b97a35cb64c9c29072853cb6d9d795  usr/share/doc/mosquitto/copyright
+61b013e701051a82aab82face207ca6e  usr/share/doc/mosquitto/examples/aclfile.example
+0e279cfa845d58199909c4f17c481bdb  usr/share/doc/mosquitto/examples/mosquitto.conf.gz
+f6475044842e8d919eec0054fa056256  usr/share/doc/mosquitto/examples/pskfile.example
+097431de3bb29435cb651c0e56ac9016  usr/share/doc/mosquitto/examples/pwfile.example
+5ff815576baf353a57498b3464061b14  usr/share/doc/mosquitto/readme.md
+8fe73cbd8493489a99f1f37f83f0f4c4  usr/share/man/man1/mosquitto_passwd.1.gz
+a7cfe9af214e0953d25bc8b85ad851e4  usr/share/man/man5/mosquitto.conf.5.gz
+0f5ba58e58529279a8a9c8a28ba00ffe  usr/share/man/man7/mosquitto-tls.7.gz
+a5a0178887f8a0e742a2181c2939ff2f  usr/share/man/man7/mqtt.7.gz
+0792fea5a199c2ebe0176611bf7c8bda  usr/share/man/man8/mosquitto.8.gz

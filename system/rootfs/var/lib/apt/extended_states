@@ -1,0 +1,280 @@
+Package: libnl-route-3-200
+Architecture: armel
+Auto-Installed: 1
+
+Package: libdbus-1-3
+Architecture: armel
+Auto-Installed: 1
+
+Package: libpcsclite1
+Architecture: armel
+Auto-Installed: 1
+
+Package: libnl-genl-3-200
+Architecture: armel
+Auto-Installed: 1
+
+Package: dbus
+Architecture: armel
+Auto-Installed: 1
+
+Package: libexpat1
+Architecture: armel
+Auto-Installed: 1
+
+Package: libnl-3-200
+Architecture: armel
+Auto-Installed: 1
+
+Package: libreadline7
+Architecture: armel
+Auto-Installed: 1
+
+Package: busybox
+Architecture: armel
+Auto-Installed: 1
+
+Package: vim-runtime
+Architecture: armel
+Auto-Installed: 1
+
+Package: libgpm2
+Architecture: armel
+Auto-Installed: 1
+
+Package: libxdmcp6
+Architecture: armel
+Auto-Installed: 1
+
+Package: libkrb5-3
+Architecture: armel
+Auto-Installed: 1
+
+Package: libgssapi-krb5-2
+Architecture: armel
+Auto-Installed: 1
+
+Package: libwrap0
+Architecture: armel
+Auto-Installed: 1
+
+Package: openssh-sftp-server
+Architecture: armel
+Auto-Installed: 1
+
+Package: libk5crypto3
+Architecture: armel
+Auto-Installed: 1
+
+Package: libx11-6
+Architecture: armel
+Auto-Installed: 1
+
+Package: krb5-locales
+Architecture: armel
+Auto-Installed: 1
+
+Package: libxau6
+Architecture: armel
+Auto-Installed: 1
+
+Package: libxcb1
+Architecture: armel
+Auto-Installed: 1
+
+Package: libkrb5support0
+Architecture: armel
+Auto-Installed: 1
+
+Package: ucf
+Architecture: armel
+Auto-Installed: 1
+
+Package: libkeyutils1
+Architecture: armel
+Auto-Installed: 1
+
+Package: libxmuu1
+Architecture: armel
+Auto-Installed: 1
+
+Package: libpam-systemd
+Architecture: armel
+Auto-Installed: 1
+
+Package: ncurses-term
+Architecture: armel
+Auto-Installed: 1
+
+Package: openssh-server
+Architecture: armel
+Auto-Installed: 1
+
+Package: libx11-data
+Architecture: armel
+Auto-Installed: 1
+
+Package: openssh-client
+Architecture: armel
+Auto-Installed: 1
+
+Package: libedit2
+Architecture: armel
+Auto-Installed: 1
+
+Package: xauth
+Architecture: armel
+Auto-Installed: 1
+
+Package: libxext6
+Architecture: armel
+Auto-Installed: 1
+
+Package: libopencore-amrnb0
+Architecture: armel
+Auto-Installed: 1
+
+Package: libasound2-data
+Architecture: armel
+Auto-Installed: 1
+
+Package: libogg0
+Architecture: armel
+Auto-Installed: 1
+
+Package: libsox3
+Architecture: armel
+Auto-Installed: 1
+
+Package: libvorbisfile3
+Architecture: armel
+Auto-Installed: 1
+
+Package: libopencore-amrwb0
+Architecture: armel
+Auto-Installed: 1
+
+Package: libmagic1
+Architecture: armel
+Auto-Installed: 1
+
+Package: libsox-fmt-alsa
+Architecture: armel
+Auto-Installed: 1
+
+Package: libwavpack1
+Architecture: armel
+Auto-Installed: 1
+
+Package: libltdl7
+Architecture: armel
+Auto-Installed: 1
+
+Package: libmagic-mgc
+Architecture: armel
+Auto-Installed: 1
+
+Package: libvorbisenc2
+Architecture: armel
+Auto-Installed: 1
+
+Package: libsndfile1
+Architecture: armel
+Auto-Installed: 1
+
+Package: libgomp1
+Architecture: armel
+Auto-Installed: 1
+
+Package: libasound2
+Architecture: armel
+Auto-Installed: 1
+
+Package: libflac8
+Architecture: armel
+Auto-Installed: 1
+
+Package: libgsm1
+Architecture: armel
+Auto-Installed: 1
+
+Package: libvorbis0a
+Architecture: armel
+Auto-Installed: 1
+
+Package: libsox-fmt-base
+Architecture: armel
+Auto-Installed: 1
+
+Package: libpng16-16
+Architecture: armel
+Auto-Installed: 1
+
+Package: libsamplerate0
+Architecture: armel
+Auto-Installed: 1
+
+Package: libfftw3-single3
+Architecture: armel
+Auto-Installed: 1
+
+Package: libev4
+Architecture: armel
+Auto-Installed: 1
+
+Package: libuv1
+Architecture: armel
+Auto-Installed: 1
+
+Package: libwebsockets8
+Architecture: armel
+Auto-Installed: 1
+
+Package: libpython3.7-minimal
+Architecture: armel
+Auto-Installed: 1
+
+Package: libsqlite3-0
+Architecture: armel
+Auto-Installed: 1
+
+Package: python3.7
+Architecture: armel
+Auto-Installed: 1
+
+Package: mime-support
+Architecture: armel
+Auto-Installed: 1
+
+Package: libmpdec2
+Architecture: armel
+Auto-Installed: 1
+
+Package: libpython3.7-stdlib
+Architecture: armel
+Auto-Installed: 1
+
+Package: python3.7-minimal
+Architecture: armel
+Auto-Installed: 1
+
+Package: python3-minimal
+Architecture: armel
+Auto-Installed: 1
+
+Package: libpython3-stdlib
+Architecture: armel
+Auto-Installed: 1
+
+Package: xz-utils
+Architecture: armel
+Auto-Installed: 1
+
+Package: bzip2
+Architecture: armel
+Auto-Installed: 1
+
+Package: file
+Architecture: armel
+Auto-Installed: 1
+

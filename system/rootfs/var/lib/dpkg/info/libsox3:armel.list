@@ -1,0 +1,15 @@
+/.
+/usr
+/usr/lib
+/usr/lib/arm-linux-gnueabi
+/usr/lib/arm-linux-gnueabi/libsox.so.3.0.0
+/usr/share
+/usr/share/bug
+/usr/share/bug/libsox3
+/usr/share/bug/libsox3/presubj
+/usr/share/doc
+/usr/share/doc/libsox3
+/usr/share/doc/libsox3/changelog.Debian.gz
+/usr/share/doc/libsox3/changelog.gz
+/usr/share/doc/libsox3/copyright
+/usr/lib/arm-linux-gnueabi/libsox.so.3

@@ -1,0 +1,77 @@
+#!/bin/sh
+# postinst script for mosquitto
+#
+# see: dh_installdeb(1)
+
+set -e
+
+setup_mosquitto_user() {
+	if ! getent group mosquitto >/dev/null; then
+		addgroup --quiet --system mosquitto
+	fi
+
+	if ! getent passwd mosquitto >/dev/null; then
+		adduser --quiet --system --no-create-home --ingroup mosquitto --home /var/lib/mosquitto --shell /usr/sbin/nologin mosquitto
+	fi
+}
+
+fix_permissions() {
+	chown mosquitto /var/lib/mosquitto
+	test ! -e /var/log/mosquitto || chown mosquitto /var/log/mosquitto
+	test ! -e /var/log/mosquitto/mosquitto.log || chown mosquitto /var/log/mosquitto/mosquitto.log
+}
+
+case "$1" in
+	configure)
+		setup_mosquitto_user
+		fix_permissions
+	;;
+
+	abort-upgrade|abort-remove|abort-deconfigure)
+	;;
+
+	*)
+		echo "postinst called with unknown argument \`$1'" >&2
+		exit 1
+	;;
+esac
+
+# Reload AppArmor profile
+APP_PROFILE="/etc/apparmor.d/usr.sbin.mosquitto"
+if [ -f "$APP_PROFILE" ] && aa-status --enabled 2>/dev/null; then
+       apparmor_parser -r "$APP_PROFILE" || true
+fi
+
+# Automatically added by dh_installinit/12.1.1
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
+	if [ -x "/etc/init.d/mosquitto" ]; then
+		update-rc.d mosquitto defaults >/dev/null
+		if [ -n "$2" ]; then
+			_dh_action=restart
+		else
+			_dh_action=start
+		fi
+		invoke-rc.d mosquitto $_dh_action || exit 1
+	fi
+fi
+# End automatically added section
+# Automatically added by dh_installsystemd/12.1.1
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
+	# This will only remove masks created by d-s-h on package removal.
+	deb-systemd-helper unmask 'mosquitto.service' >/dev/null || true
+
+	# was-enabled defaults to true, so new installations run enable.
+	if deb-systemd-helper --quiet was-enabled 'mosquitto.service'; then
+		# Enables the unit on first installation, creates new
+		# symlinks on upgrades if the unit file has changed.
+		deb-systemd-helper enable 'mosquitto.service' >/dev/null || true
+	else
+		# Update the statefile to add new symlinks (if any), which need to be
+		# cleaned up on purge. Also remove old symlinks.
+		deb-systemd-helper update-state 'mosquitto.service' >/dev/null || true
+	fi
+fi
+# End automatically added section
+
+
+exit 0
