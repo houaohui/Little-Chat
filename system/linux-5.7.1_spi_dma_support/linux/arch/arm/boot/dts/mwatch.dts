@@ -1,0 +1,150 @@
+// SPDX-License-Identifier: (GPL-2.0+ OR X11)
+/*
+ * Copyright 2018 Icenowy Zheng <icenowy@aosc.io>
+ */
+
+/dts-v1/;
+#include "mwatch.dtsi"
+#include <dt-bindings/gpio/gpio.h>
+#include <dt-bindings/input/input.h>
+/ {
+	model = "Lichee Pi Nano";
+	compatible = "licheepi,licheepi-nano", "allwinner,suniv-f1c100s";
+
+	aliases {
+		serial0 = &uart0;
+	};
+
+	chosen {
+		stdout-path = "serial0:115200n8";
+	};
+
+
+
+	reg_vcc3v3: vcc3v3 {
+		compatible = "regulator-fixed";
+		regulator-name = "vcc3v3";
+		regulator-min-microvolt = <3300000>;
+		regulator-max-microvolt = <3300000>;
+	};
+	leds {
+		compatible = "gpio-leds";
+		opctl {
+			label = "opctl";
+			//linux,default-trigger = "heartbeat"; //默认设置为系统心跳灯
+			gpios = <&pio 3 7 GPIO_ACTIVE_LOW>; /* PE22 */
+			default-state = "on";
+		};
+	};
+
+	gpio-keys {
+		compatible = "gpio-keys";
+		autorepeat;
+		key1{
+			label = "USER-KEY1";
+			linux,code = <KEY_DOWN>;//键值
+			gpios = <&pio 3 18 GPIO_ACTIVE_LOW>; //PD18
+			gpio-key,wakeup;
+		};
+		key2{
+			label = "USER-KEY2";
+			linux,code = <KEY_ENTER>;//键值
+			gpios = <&pio 3 19 GPIO_ACTIVE_LOW>; //PD19
+			gpio-key,wakeup;
+		};
+		key3{
+			label = "USER-KEY3";
+			linux,code = <KEY_UP>; //键值
+			gpios = <&pio 3 20 GPIO_ACTIVE_LOW>; //PD20
+			gpio-key,wakeup;
+		};
+	};
+	
+};
+
+&mmc0 {
+	vmmc-supply = <&reg_vcc3v3>;
+	bus-width = <4>;
+	broken-cd;
+	status = "okay";
+};
+
+&uart0 {
+	pinctrl-names = "default";
+	pinctrl-0 = <&uart0_pe_pins>;
+	status = "okay";
+};
+
+&otg_sram {
+	status = "okay";
+};
+
+&usb_otg {
+	dr_mode = "otg";
+	status = "okay";
+};
+
+&usbphy {
+	usb0_id_det-gpio = <&pio 4 2 GPIO_ACTIVE_HIGH>; /* PE2 */
+	status = "okay";
+};
+
+
+
+
+&spi0{
+    status = "okay";
+    st7789v: st7789v@0{
+        compatible = "sitronix,st7789v";
+        reg = <0>;
+        status = "okay";
+        spi-max-frequency = <100000000>;
+        spi-cpol;
+        spi-cpha;
+        rotate = <90>;
+        fps = <30>;
+        buswidth = <8>;
+        dc-gpios = <&pio 4 9 GPIO_ACTIVE_HIGH>;  // PE9
+        reset-gpios = <&pio 4 10 GPIO_ACTIVE_HIGH>; // PE10
+        led-gpios = <&pio 3 14 GPIO_ACTIVE_HIGH>;  // PD14
+        debug = <0x4>;
+    };
+};
+
+&spi1 {
+	status = "okay";   
+	esp8089@0 {
+		status = "okay";
+		compatible = "boss,esp8089";
+		spi-cpol;
+		spi-cpha;
+		reg = <0>;
+		spi-max-frequency = <30000000>;
+		reset= <133>; //PE5
+		interrupt= <132>; //PE4
+		debug= <0>;
+	};
+};
+
+&codec {
+	allwinner,audio-routing =
+	"Headphone", "HP",
+	"Headphone", "HPCOM",
+	"MIC", "Mic";
+	status = "okay";
+};
+
+&i2c2 {
+	clock_frequency = <100000>;
+	status = "okay";
+	
+	mpu6050: mpu6050@68 {
+		compatible = "invensense,mpu6050";
+		reg = <0x68>;
+		interrupt-parent = <&pio>;
+		//interrupts = <3 21 IRQ_TYPE_LEVEL_LOW>;
+		interrupts = <3 21 IRQ_TYPE_EDGE_FALLING>;  /* PD21*/
+		status = "okay";
+	};
+};
+
