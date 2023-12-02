@@ -1,0 +1,2 @@
+setexpr.c:18:14:get_arg	8	static
+setexpr.c:294:12:do_setexpr	24	static

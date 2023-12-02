@@ -1,0 +1,9 @@
+tiny-printf.c:360:13:putc_outstr	0	static
+tiny-printf.c:331:13:putc_normal	8	static
+tiny-printf.c:36:13:div_out	8	static
+tiny-printf.c:199:12:_vprintf	56	static
+tiny-printf.c:336:5:vprintf	24	static
+tiny-printf.c:344:5:printf	32	static
+tiny-printf.c:365:5:sprintf	28	static
+tiny-printf.c:398:5:snprintf	32	static
+tiny-printf.c:414:6:print_grouped_ull	8	static

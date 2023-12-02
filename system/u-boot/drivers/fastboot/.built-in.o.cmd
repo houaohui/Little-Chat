@@ -1,0 +1,1 @@
+cmd_drivers/fastboot/built-in.o :=  arm-linux-gnueabi-ld.bfd     -r -o drivers/fastboot/built-in.o drivers/fastboot/fb_common.o drivers/fastboot/fb_getvar.o drivers/fastboot/fb_command.o drivers/fastboot/fb_mmc.o 

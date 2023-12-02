@@ -1,0 +1,2 @@
+attr.c:28:5:env_attr_walk	32	static
+attr.c:259:5:env_attr_lookup	40	static

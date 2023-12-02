@@ -1,0 +1,8 @@
+spi-sunxi.c:459:12:sun4i_spi_set_mode	16	static
+spi-sunxi.c:165:13:sun4i_spi_set_cs	16	static
+spi-sunxi.c:411:12:sun4i_spi_set_speed	24	static
+spi-sunxi.c:340:12:sun4i_spi_xfer	40	static
+spi-sunxi.c:329:12:sun4i_spi_release_bus	24	static
+spi-sunxi.c:307:12:sun4i_spi_claim_bus	32	static
+spi-sunxi.c:523:12:sun4i_spi_ofdata_to_platdata	24	static
+spi-sunxi.c:487:12:sun4i_spi_probe	72	static

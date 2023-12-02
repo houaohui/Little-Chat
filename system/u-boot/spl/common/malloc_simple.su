@@ -1,0 +1,5 @@
+malloc_simple.c:18:14:alloc_simple	24	static
+malloc_simple.c:38:7:malloc_simple	8	static
+malloc_simple.c:51:7:memalign_simple	8	static
+malloc_simple.c:64:7:calloc	16	static
+malloc_simple.c:78:6:malloc_simple_info	8	static

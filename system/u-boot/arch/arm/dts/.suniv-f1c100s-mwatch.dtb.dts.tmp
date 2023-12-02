@@ -1,0 +1,407 @@
+# 1 "arch/arm/dts/.suniv-f1c100s-mwatch.dtb.pre.tmp"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "././include/linux/kconfig.h" 1
+
+
+
+# 1 "include/generated/autoconf.h" 1
+# 5 "././include/linux/kconfig.h" 2
+# 1 "<command-line>" 2
+# 1 "arch/arm/dts/.suniv-f1c100s-mwatch.dtb.pre.tmp"
+
+
+
+
+
+/dts-v1/;
+# 1 "arch/arm/dts/suniv-f1c100s.dtsi" 1
+
+
+
+
+
+# 1 "arch/arm/dts/suniv.dtsi" 1
+
+
+
+
+
+# 1 "./arch/arm/dts/include/dt-bindings/clock/suniv-ccu.h" 1
+# 7 "arch/arm/dts/suniv.dtsi" 2
+# 1 "./arch/arm/dts/include/dt-bindings/reset/suniv-ccu.h" 1
+# 8 "arch/arm/dts/suniv.dtsi" 2
+
+/ {
+ #address-cells = <1>;
+ #size-cells = <1>;
+ interrupt-parent = <&intc>;
+
+ clocks {
+  #address-cells = <1>;
+  #size-cells = <1>;
+  ranges;
+
+  osc24M: clk-24M {
+   #clock-cells = <0>;
+   compatible = "fixed-clock";
+   clock-frequency = <24000000>;
+   clock-output-names = "osc24M";
+  };
+
+  osc32k: clk-32k {
+   #clock-cells = <0>;
+   compatible = "fixed-clock";
+   clock-frequency = <32768>;
+   clock-output-names = "osc32k";
+  };
+
+  fake100M: clk-100M {
+   #clock-cells = <0>;
+   compatible = "fixed-clock";
+   clock-frequency = <100000000>;
+   clock-output-names = "fake-100M";
+  };
+ };
+
+ cpus {
+  #address-cells = <0>;
+  #size-cells = <0>;
+
+  cpu {
+   compatible = "arm,arm926ej-s";
+   device_type = "cpu";
+  };
+ };
+
+ soc {
+  compatible = "simple-bus";
+  #address-cells = <1>;
+  #size-cells = <1>;
+  ranges;
+
+  sram-controller@1c00000 {
+   compatible = "allwinner,sun4i-a10-sram-controller";
+   reg = <0x01c00000 0x30>;
+   #address-cells = <1>;
+   #size-cells = <1>;
+   ranges;
+
+   sram_d: sram@10000 {
+    compatible = "mmio-sram";
+    reg = <0x00010000 0x1000>;
+    #address-cells = <1>;
+    #size-cells = <1>;
+    ranges = <0 0x00010000 0x1000>;
+
+    otg_sram: sram-section@0 {
+     compatible = "allwinner,sun4i-a10-sram-d";
+     reg = <0x0000 0x1000>;
+     status = "disabled";
+    };
+   };
+  };
+
+  spi0: spi@1c05000 {
+   compatible = "allwinner,suniv-spi";
+   reg = <0x01c05000 0x1000>;
+   interrupts = <10>;
+   clocks = <&ccu 17>, <&ccu 17>;
+   clock-names = "ahb", "mod";
+   resets = <&ccu 5>;
+   status = "disabled";
+   #address-cells = <1>;
+   #size-cells = <0>;
+  };
+
+  spi1: spi@1c06000 {
+   compatible = "allwinner,suniv-spi";
+   reg = <0x01c06000 0x1000>;
+   interrupts = <10>;
+   clocks = <&ccu 18>, <&ccu 18>;
+   clock-names = "ahb", "mod";
+   resets = <&ccu 6>;
+   status = "disabled";
+   #address-cells = <1>;
+   #size-cells = <0>;
+  };
+
+  ccu: clock@1c20000 {
+   compatible = "allwinner,suniv-ccu";
+   reg = <0x01c20000 0x400>;
+   clocks = <&osc24M>, <&osc32k>;
+   clock-names = "hosc", "losc";
+   #clock-cells = <1>;
+   #reset-cells = <1>;
+  };
+
+  intc: interrupt-controller@1c20400 {
+   compatible = "allwinner,suniv-ic";
+   reg = <0x01c20400 0x400>;
+   interrupt-controller;
+   #interrupt-cells = <1>;
+  };
+
+  pio: pinctrl@1c20800 {
+   compatible = "allwinner,suniv-pinctrl";
+   reg = <0x01c20800 0x400>;
+   interrupts = <38>, <39>, <40>;
+   clocks = <&ccu 36>, <&osc24M>, <&osc32k>;
+   clock-names = "apb", "hosc", "losc";
+   gpio-controller;
+   interrupt-controller;
+   #interrupt-cells = <3>;
+   #gpio-cells = <3>;
+
+   spi0_pins_a: spi0-pins-pc {
+    pins = "PC0", "PC1", "PC2", "PC3";
+    function = "spi0";
+   };
+
+   uart0_pins_a: uart-pins-pe {
+    pins = "PE0", "PE1";
+    function = "uart0";
+   };
+
+   mmc0_pins: mmc0-pins {
+    pins = "PF0", "PF1", "PF2", "PF3", "PF4", "PF5";
+    function = "mmc0";
+   };
+  };
+
+  timer@1c20c00 {
+   compatible = "allwinner,sun4i-a10-timer";
+   reg = <0x01c20c00 0x90>;
+   interrupts = <13>;
+   clocks = <&osc24M>;
+  };
+
+  wdt: watchdog@1c20ca0 {
+   compatible = "allwinner,sun6i-a31-wdt";
+   reg = <0x01c20ca0 0x20>;
+  };
+
+  uart0: serial@1c25000 {
+   compatible = "snps,dw-apb-uart";
+   reg = <0x01c25000 0x400>;
+   interrupts = <1>;
+   reg-shift = <2>;
+   reg-io-width = <4>;
+   clocks = <&ccu 37>;
+   resets = <&ccu 24>;
+   status = "disabled";
+  };
+
+  uart1: serial@1c25400 {
+   compatible = "snps,dw-apb-uart";
+   reg = <0x01c25400 0x400>;
+   interrupts = <2>;
+   reg-shift = <2>;
+   reg-io-width = <4>;
+   clocks = <&ccu 38>;
+   resets = <&ccu 25>;
+   status = "disabled";
+  };
+
+  uart2: serial@1c25800 {
+   compatible = "snps,dw-apb-uart";
+   reg = <0x01c25800 0x400>;
+   interrupts = <3>;
+   reg-shift = <2>;
+   reg-io-width = <4>;
+   clocks = <&ccu 39>;
+   resets = <&ccu 26>;
+   status = "disabled";
+  };
+
+  usb_otg: usb@1c13000 {
+   compatible = "allwinner,sun8i-h3-musb";
+   reg = <0x01c13000 0x0400>;
+   clocks = <&ccu 19>;
+   resets = <&ccu 7>;
+   interrupts = <26>;
+   interrupt-names = "mc";
+   phys = <&usbphy 0>;
+   phy-names = "usb";
+   extcon = <&usbphy 0>;
+   allwinner,sram = <&otg_sram 1>;
+   status = "disabled";
+  };
+
+  usbphy: phy@1c13400 {
+   compatible = "allwinner,suniv-usb-phy";
+   reg = <0x01c13400 0x10>;
+   reg-names = "phy_ctrl";
+   clocks = <&ccu 48>;
+   clock-names = "usb0_phy";
+   resets = <&ccu 0>;
+   reset-names = "usb0_reset";
+   #phy-cells = <1>;
+   status = "disabled";
+  };
+
+  mmc0: mmc@1c0f000 {
+   compatible = "allwinner,suniv-mmc",
+         "allwinner,sun7i-a20-mmc";
+   reg = <0x01c0f000 0x1000>;
+   clocks = <&ccu 14>,
+     <&ccu 40>,
+     <&ccu 42>,
+     <&ccu 41>;
+   clock-names = "ahb",
+          "mmc",
+          "output",
+          "sample";
+   resets = <&ccu 2>;
+   reset-names = "ahb";
+   interrupts = <23>;
+   pinctrl-names = "default";
+   pinctrl-0 = <&mmc0_pins>;
+   status = "disabled";
+   #address-cells = <1>;
+   #size-cells = <0>;
+  };
+
+  mmc2: mmc@1c10000 {
+   compatible = "allwinner,suniv-mmc",
+         "allwinner,sun7i-a20-mmc";
+   reg = <0x01c10000 0x1000>;
+   clocks = <&ccu 15>,
+     <&ccu 43>,
+     <&ccu 45>,
+     <&ccu 44>;
+   clock-names = "ahb",
+          "mmc",
+          "output",
+          "sample";
+   resets = <&ccu 3>;
+   reset-names = "ahb";
+   interrupts = <24>;
+   status = "disabled";
+   #address-cells = <1>;
+   #size-cells = <0>;
+  };
+ };
+};
+# 6 "arch/arm/dts/suniv-f1c100s.dtsi" 2
+# 8 "arch/arm/dts/.suniv-f1c100s-mwatch.dtb.pre.tmp" 2
+
+# 1 "./arch/arm/dts/include/dt-bindings/gpio/gpio.h" 1
+# 10 "arch/arm/dts/.suniv-f1c100s-mwatch.dtb.pre.tmp" 2
+
+/ {
+ model = "M-Watch";
+ compatible = "allwinner,suniv-f1c100s",
+       "allwinner,suniv";
+
+ aliases {
+  mmc0 = &mmc0;
+  serial0 = &uart0;
+  spi0 = &spi0;
+ };
+
+ chosen {
+  stdout-path = "serial0:115200n8";
+ };
+ reg_vcc3v3: vcc3v3 {
+  compatible = "regulator-fixed";
+  regulator-name = "vcc3v3";
+  regulator-min-microvolt = <3300000>;
+  regulator-max-microvolt = <3300000>;
+ };
+};
+
+&otg_sram {
+ status = "okay";
+};
+
+&spi0 {
+ pinctrl-names = "default";
+ pinctrl-0 = <&spi0_pins_a>;
+ status = "okay";
+
+ flash@0 {
+  #address-cells = <1>;
+  #size-cells = <1>;
+  compatible = "winbond,w25q128", "jedec,spi-nor";
+  reg = <0>;
+  spi-max-frequency = <40000000>;
+ };
+ key2{
+   label = "USER-KEY2";
+   gpios = <&pio 3 19 1>;
+   gpio-key,wakeup;
+  };
+};
+
+&uart0 {
+ pinctrl-names = "default";
+ pinctrl-0 = <&uart0_pins_a>;
+ status = "okay";
+};
+
+&usb_otg {
+ status = "okay";
+};
+
+&usbphy {
+ status = "okay";
+};
+
+&mmc0 {
+ broken-cd;
+ bus-width = <4>;
+ disable-wp;
+ status = "okay";
+ vmmc-supply = <&reg_vcc3v3>;
+};
+
+# 1 "arch/arm/dts/sunxi-u-boot.dtsi" 1
+# 1 "include/config.h" 1
+
+
+# 1 "include/config_defaults.h" 1
+# 4 "include/config.h" 2
+# 1 "include/config_uncmd_spl.h" 1
+# 5 "include/config.h" 2
+# 1 "include/configs/suniv.h" 1
+# 13 "include/configs/suniv.h"
+# 1 "include/configs/sunxi-common.h" 1
+# 15 "include/configs/sunxi-common.h"
+# 1 "./arch/arm/include/asm/arch/cpu.h" 1
+# 14 "./arch/arm/include/asm/arch/cpu.h"
+# 1 "./arch/arm/include/asm/arch/cpu_sun4i.h" 1
+# 15 "./arch/arm/include/asm/arch/cpu.h" 2
+# 16 "include/configs/sunxi-common.h" 2
+# 1 "include/linux/stringify.h" 1
+# 17 "include/configs/sunxi-common.h" 2
+# 453 "include/configs/sunxi-common.h"
+# 1 "include/config_distro_bootcmd.h" 1
+# 454 "include/configs/sunxi-common.h" 2
+# 14 "include/configs/suniv.h" 2
+# 6 "include/config.h" 2
+# 1 "./arch/arm/include/asm/config.h" 1
+# 7 "include/config.h" 2
+# 1 "include/linux/kconfig.h" 1
+# 8 "include/config.h" 2
+# 1 "include/config_fallbacks.h" 1
+# 8 "include/config.h" 2
+# 2 "arch/arm/dts/sunxi-u-boot.dtsi" 2
+
+/ {
+ aliases {
+  mmc1 = &mmc2;
+ };
+
+ binman {
+  filename = "u-boot-sunxi-with-spl.bin";
+  pad-byte = <0xff>;
+  blob {
+   filename = "spl/sunxi-spl.bin";
+  };
+  u-boot-img {
+   offset = <32768>;
+  };
+ };
+};
+# 78 "arch/arm/dts/.suniv-f1c100s-mwatch.dtb.pre.tmp" 2

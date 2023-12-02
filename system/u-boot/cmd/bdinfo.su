@@ -1,0 +1,3 @@
+bdinfo.c:26:13:print_num	8	static
+bdinfo.c:20:21:print_cpu_word_size	8	static
+bdinfo.c:316:12:do_bdinfo	16	static

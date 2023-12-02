@@ -1,0 +1,2 @@
+legacy-mtd-utils.c:44:5:mtd_arg_off	24	static
+legacy-mtd-utils.c:60:5:mtd_arg_off_size	56	static

@@ -1,0 +1,14 @@
+usb.c:34:14:usb_get_class_desc	4	static
+usb.c:60:13:usb_display_class_sub	16	static
+usb.c:152:13:usb_display_desc	48	static
+usb.c:336:13:usb_show_tree_graph	56	static
+usb.c:443:13:usb_show_subtree	48	static
+usb.c:454:13:usb_for_each_root_dev	24	static
+usb.c:142:13:usb_display_string	304	static
+usb.c:246:13:usb_display_config	40	static
+usb.c:607:13:usb_show_info	24	static
+usb.c:271:27:usb_find_device	32	static
+usb.c:559:12:do_usbboot	8	static
+usb.c:577:13:do_usb_start	8	static
+usb.c:476:6:usb_show_tree	8	static
+usb.c:629:12:do_usb	48	static

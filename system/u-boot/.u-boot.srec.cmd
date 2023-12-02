@@ -1,0 +1,1 @@
+cmd_u-boot.srec := arm-linux-gnueabi-objcopy --gap-fill=0xff  -j .text -j .secure_text -j .secure_data -j .rodata -j .hash -j .data -j .got -j .got.plt -j .u_boot_list -j .rel.dyn -j .binman_sym_table -j .text_rest -j .dtb.init.rodata -O srec u-boot u-boot.srec

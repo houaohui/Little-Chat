@@ -1,0 +1,2 @@
+config.c:34:1:usb_descriptor_fillbuf	32	static
+config.c:76:5:usb_gadget_config_buf	16	static

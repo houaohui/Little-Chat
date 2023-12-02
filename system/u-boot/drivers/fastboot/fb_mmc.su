@@ -1,0 +1,7 @@
+fb_mmc.c:97:17:fb_mmc_sparse_reserve	0	static
+fb_mmc.c:31:12:part_get_info_by_name_or_alias	88	static
+fb_mmc.c:61:17:fb_mmc_blk_write	40	static
+fb_mmc.c:88:17:fb_mmc_sparse_write	8	static
+fb_mmc.c:375:5:fastboot_mmc_get_part_info	24	static
+fb_mmc.c:408:6:fastboot_mmc_flash_write	208	static
+fb_mmc.c:525:6:fastboot_mmc_erase	152	static

@@ -1,0 +1,6 @@
+display_options.c:15:7:display_options_get_banner_priv	32	static
+display_options.c:38:7:display_options_get_banner	8	static
+display_options.c:43:5:display_options	208	static
+display_options.c:53:6:print_freq	48	static
+display_options.c:93:6:print_size	56	static
+display_options.c:136:5:print_buffer	128	static

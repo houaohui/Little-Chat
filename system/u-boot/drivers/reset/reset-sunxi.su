@@ -1,0 +1,7 @@
+reset-sunxi.c:43:12:sunxi_reset_free	0	static
+reset-sunxi.c:31:12:sunxi_reset_request	16	static
+reset-sunxi.c:50:12:sunxi_set_reset	16	static
+reset-sunxi.c:80:12:sunxi_reset_deassert	8	static
+reset-sunxi.c:75:12:sunxi_reset_assert	8	static
+reset-sunxi.c:92:12:sunxi_reset_probe	16	static
+reset-sunxi.c:101:5:sunxi_reset_bind	40	static

@@ -1,0 +1,11 @@
+phy-sun4i-usb.c:145:13:sun4i_usb_phy_write	24	static
+phy-sun4i-usb.c:190:13:sun4i_usb_phy_passby	16	static
+phy-sun4i-usb.c:355:12:sun4i_usb_phy_xlate	16	static
+phy-sun4i-usb.c:237:12:sun4i_usb_phy_power_off	16	static
+phy-sun4i-usb.c:217:12:sun4i_usb_phy_power_on	16	static
+phy-sun4i-usb.c:322:12:sun4i_usb_phy_exit	24	static
+phy-sun4i-usb.c:426:12:sun4i_usb_phy_probe	48	static
+phy-sun4i-usb.c:267:12:sun4i_usb_phy_init	24	static
+phy-sun4i-usb.c:375:5:sun4i_usb_phy_vbus_detect	16	static
+phy-sun4i-usb.c:400:5:sun4i_usb_phy_id_detect	16	static
+phy-sun4i-usb.c:413:6:sun4i_usb_phy_set_squelch_detect	8	static

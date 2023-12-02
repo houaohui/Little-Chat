@@ -1,0 +1,11 @@
+fdtaddr.c:20:12:devfdt_get_addr_index	32	static
+fdtaddr.c:95:12:devfdt_get_addr_size_index	24	static
+fdtaddr.c:117:12:devfdt_get_addr_name	16	static
+fdtaddr.c:133:12:devfdt_get_addr_size_name	16	static
+fdtaddr.c:150:12:devfdt_get_addr	8	static
+fdtaddr.c:155:7:devfdt_get_addr_ptr	8	static
+fdtaddr.c:160:7:devfdt_remap_addr_index	8	static
+fdtaddr.c:170:7:devfdt_remap_addr_name	8	static
+fdtaddr.c:180:7:devfdt_remap_addr	8	static
+fdtaddr.c:185:7:devfdt_map_physmem	8	static
+fdtaddr.c:195:12:devfdt_get_addr_pci	8	static

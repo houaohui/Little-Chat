@@ -1,0 +1,14 @@
+f_fastboot.c:221:28:fastboot_start_ep	16	static
+f_fastboot.c:197:13:fastboot_unbind	8	static
+f_fastboot.c:292:12:fastboot_add	16	static
+f_fastboot.c:202:13:fastboot_disable	8	static
+f_fastboot.c:240:12:fastboot_set_alt	16	static
+f_fastboot.c:143:13:fastboot_complete	8	static
+f_fastboot.c:346:13:compl_do_reset	8	static
+f_fastboot.c:411:13:do_exit_on_complete	8	static
+f_fastboot.c:416:13:do_bootm_on_complete	8	static
+f_fastboot.c:351:21:rx_bytes_expected	16	static
+f_fastboot.c:341:12:fastboot_tx_write_str	24	static
+f_fastboot.c:422:13:rx_handler_command	96	static
+f_fastboot.c:375:13:rx_handler_dl_image	88	static
+f_fastboot.c:151:12:fastboot_bind	24	static

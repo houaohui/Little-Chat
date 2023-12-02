@@ -1,0 +1,2 @@
+image-android-dt.c:19:6:android_dt_check_header	0	static
+image-android-dt.c:41:6:android_dt_get_fdt_by_index	40	static

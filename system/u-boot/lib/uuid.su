@@ -1,0 +1,5 @@
+uuid.c:63:5:uuid_str_valid	20	static
+uuid.c:149:5:uuid_str_to_bin	48	static
+uuid.c:201:6:uuid_bin_to_str	64	static
+uuid.c:248:6:gen_rand_uuid	32	static
+uuid.c:278:6:gen_rand_uuid_str	32	static

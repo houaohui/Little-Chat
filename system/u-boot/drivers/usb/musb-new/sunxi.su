@@ -1,0 +1,10 @@
+sunxi.c:505:12:musb_usb_remove	16	static
+sunxi.c:374:13:sunxi_musb_post_root_reset_end	8	static
+sunxi.c:367:13:sunxi_musb_pre_root_reset_end	8	static
+sunxi.c:347:12:sunxi_musb_exit	16	static
+sunxi.c:203:20:sunxi_musb_interrupt	16	static
+sunxi.c:440:12:musb_usb_probe	64	static
+sunxi.c:271:13:sunxi_musb_disable	16	static
+sunxi.c:295:12:sunxi_musb_init	32	static
+sunxi.c:229:12:sunxi_musb_enable	24	static
+sunxi.c:194:6:dfu_usb_get_reset	0	static

@@ -1,0 +1,6 @@
+cli.c:32:5:run_command	8	static
+cli.c:59:5:run_command_repeatable	8	static
+cli.c:84:5:run_command_list	24	static
+cli.c:132:5:do_run	32	static
+cli.c:225:6:cli_loop	8	static
+cli.c:239:6:cli_init	8	static

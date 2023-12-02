@@ -1,0 +1,2 @@
+spl_legacy.c:18:5:spl_parse_legacy_header	16	static
+spl_legacy.c:78:5:spl_load_legacy_img	88	static

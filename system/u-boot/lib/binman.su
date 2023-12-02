@@ -1,0 +1,2 @@
+binman.c:21:5:binman_entry_find	16	static
+binman.c:40:5:binman_init	16	static

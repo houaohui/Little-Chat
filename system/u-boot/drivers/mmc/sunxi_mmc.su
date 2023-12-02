@@ -1,0 +1,8 @@
+sunxi_mmc.c:590:12:sunxi_mmc_getcd	16	static
+sunxi_mmc.c:683:12:sunxi_mmc_bind	16	static
+sunxi_mmc.c:111:12:mmc_set_mod_clk	24	static
+sunxi_mmc.c:608:12:sunxi_mmc_probe	152	static
+sunxi_mmc.c:212:12:mmc_update_clk.isra.0	24	static
+sunxi_mmc.c:573:12:sunxi_mmc_set_ios	24	static
+sunxi_mmc.c:342:12:mmc_rint_wait.isra.0	32	static
+sunxi_mmc.c:581:12:sunxi_mmc_send_cmd	48	static

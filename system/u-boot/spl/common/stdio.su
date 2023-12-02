@@ -1,0 +1,12 @@
+stdio.c:75:12:stdio_serial_tstc	8	static
+stdio.c:70:12:stdio_serial_getc	8	static
+stdio.c:65:13:stdio_serial_puts	8	static
+stdio.c:60:13:stdio_serial_putc	8	static
+stdio.c:117:19:stdio_get_list	0	static
+stdio.c:175:19:stdio_get_by_name	24	static
+stdio.c:208:19:stdio_clone	16	static
+stdio.c:225:5:stdio_register_dev	16	static
+stdio.c:239:5:stdio_register	8	static
+stdio.c:296:5:stdio_init_tables	0	static
+stdio.c:316:5:stdio_add_devices	96	static
+stdio.c:403:5:stdio_init	8	static

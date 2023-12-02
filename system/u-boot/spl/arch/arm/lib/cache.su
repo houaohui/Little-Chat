@@ -1,0 +1,9 @@
+cache.c:39:13:enable_caches	0	static
+cache.c:44:13:invalidate_dcache_range	0	static
+cache.c:48:13:flush_dcache_range	0	static
+cache.c:21:13:flush_cache	0	static
+cache.c:30:13:flush_dcache_all	0	static
+cache.c:53:5:check_cache_range	0	static
+cache.c:123:6:invalidate_l2_cache	0	static
+cache.c:138:12:arm_reserve_mmu	0	static
+cache.c:133:5:arch_reserve_mmu	0	static

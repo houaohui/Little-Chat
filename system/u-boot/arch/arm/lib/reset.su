@@ -1,0 +1,2 @@
+reset.c:29:13:reset_misc	0	static
+reset.c:33:5:do_reset	8	static

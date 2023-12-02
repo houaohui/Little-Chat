@@ -1,0 +1,4 @@
+clk_sunxi.c:24:12:sunxi_set_gate	16	static
+clk_sunxi.c:54:12:sunxi_clk_disable	8	static
+clk_sunxi.c:49:12:sunxi_clk_enable	8	static
+clk_sunxi.c:64:5:sunxi_clk_probe	32	static

@@ -1,0 +1,11 @@
+bootm_os.c:47:13:copy_args	32	static
+bootm_os.c:155:12:do_bootm_rtems	16	static
+bootm_os.c:346:5:do_bootm_vxworks	56	static
+bootm_os.c:221:12:do_bootm_plan9	24	static
+bootm_os.c:25:12:do_bootm_standalone	24	static
+bootm_os.c:383:12:do_bootm_qnxelf	40	static
+bootm_os.c:61:12:do_bootm_netbsd	48	static
+bootm_os.c:600:13:arch_preboot_os	0	static
+bootm_os.c:606:13:board_preboot_os	0	static
+bootm_os.c:611:5:boot_selected_os	24	static
+bootm_os.c:629:13:bootm_os_get_boot_func	0	static

@@ -1,0 +1,5 @@
+dram_suniv.c:85:12:dram_delay_scan	0	static
+dram_suniv.c:98:13:dram_set_autofresh_cycle	8	static
+dram_suniv.c:249:12:dram_scan_readpipe.constprop	72	static
+dram_suniv.c:143:12:dram_para_setup.constprop	20	static
+dram_suniv.c:493:15:sunxi_dram_init	32	static

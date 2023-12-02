@@ -1,0 +1,13 @@
+phy-uclass.c:36:5:generic_phy_get_by_index_nodev	112	static
+phy-uclass.c:95:5:generic_phy_get_by_index	8	static
+phy-uclass.c:101:5:generic_phy_get_by_name	16	static
+phy-uclass.c:117:5:generic_phy_init	8	static
+phy-uclass.c:128:5:generic_phy_reset	8	static
+phy-uclass.c:139:5:generic_phy_exit	8	static
+phy-uclass.c:150:5:generic_phy_power_on	8	static
+phy-uclass.c:161:5:generic_phy_power_off	8	static
+phy-uclass.c:172:5:generic_phy_get_bulk	32	static
+phy-uclass.c:202:5:generic_phy_init_bulk	32	static
+phy-uclass.c:224:5:generic_phy_exit_bulk	24	static
+phy-uclass.c:235:5:generic_phy_power_on_bulk	32	static
+phy-uclass.c:257:5:generic_phy_power_off_bulk	24	static

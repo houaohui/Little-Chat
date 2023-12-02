@@ -1,0 +1,8 @@
+part_dos.c:74:12:test_block_type	24	static
+part_dos.c:112:12:part_test_dos	24	dynamic
+part_dos.c:215:12:part_get_info_extended	48	dynamic
+part_dos.c:321:5:part_get_info_dos	24	static
+part_dos.c:144:13:print_partition_extended	80	dynamic
+part_dos.c:315:6:part_print_dos	16	static
+part_dos.c:327:5:is_valid_dos_buf	8	static
+part_dos.c:332:5:write_mbr_partition	16	static

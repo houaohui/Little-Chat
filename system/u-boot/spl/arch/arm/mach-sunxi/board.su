@@ -1,0 +1,8 @@
+board.c:164:12:spl_board_load_image	8	static
+board.c:235:12:sunxi_get_boot_source	8	static
+board.c:175:6:s_init	8	static
+board.c:246:10:sunxi_get_boot_device	8	static
+board.c:292:15:spl_mmc_get_uboot_raw_sector	8	static
+board.c:316:6:board_boot_order	16	static
+board.c:333:6:board_init_f	8	static
+board.c:346:6:reset_cpu	0	static

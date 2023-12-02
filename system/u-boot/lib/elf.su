@@ -1,0 +1,5 @@
+elf.c:26:15:load_elf64_image_phdr	32	static
+elf.c:67:15:load_elf64_image_shdr	24	static
+elf.c:138:15:load_elf_image_phdr	32	static
+elf.c:170:15:load_elf_image_shdr	24	static
+elf.c:229:5:valid_elf_image	8	static

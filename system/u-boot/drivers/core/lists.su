@@ -1,0 +1,6 @@
+lists.c:23:16:lists_driver_lookup_name	24	static
+lists.c:39:23:lists_uclass_lookup	0	static
+lists.c:54:5:lists_bind_drivers	40	static
+lists.c:83:5:device_bind_driver_to_node	32	static
+lists.c:76:5:device_bind_driver	24	static
+lists.c:128:5:lists_bind_fdt	72	static

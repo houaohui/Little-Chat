@@ -1,0 +1,4 @@
+dump.c:13:13:show_devices	32	static
+dump.c:46:6:dm_dump_all	16	static
+dump.c:75:6:dm_dump_uclass	40	static
+dump.c:100:6:dm_dump_drivers	24	static

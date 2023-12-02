@@ -1,0 +1,3 @@
+clk_fixed_rate.c:17:12:dummy_enable	0	static
+clk_fixed_rate.c:11:14:clk_fixed_rate_get_rate	8	static
+clk_fixed_rate.c:27:12:clk_fixed_rate_ofdata_to_platdata	24	static

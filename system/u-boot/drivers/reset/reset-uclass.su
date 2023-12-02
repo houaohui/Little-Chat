@@ -1,0 +1,13 @@
+reset-uclass.c:35:12:reset_get_by_index_tail.isra.0.part.0	32	static
+reset-uclass.c:77:5:reset_get_by_index	96	static
+reset-uclass.c:90:5:reset_get_by_index_nodev	96	static
+reset-uclass.c:137:5:reset_get_by_name	16	static
+reset-uclass.c:155:5:reset_request	8	static
+reset-uclass.c:164:5:reset_free	8	static
+reset-uclass.c:173:5:reset_assert	8	static
+reset-uclass.c:182:5:reset_assert_bulk	16	static
+reset-uclass.c:195:5:reset_deassert	8	static
+reset-uclass.c:204:5:reset_deassert_bulk	16	static
+reset-uclass.c:217:5:reset_status	8	static
+reset-uclass.c:226:5:reset_release_all	24	static
+reset-uclass.c:103:5:reset_get_bulk	32	static

@@ -1,0 +1,9 @@
+sunxi_gpio.c:32:12:sunxi_gpio_output	8	static
+sunxi_gpio.c:63:5:gpio_request	0	static
+sunxi_gpio.c:68:5:gpio_free	0	static
+sunxi_gpio.c:73:5:gpio_direction_input	8	static
+sunxi_gpio.c:80:5:gpio_direction_output	16	static
+sunxi_gpio.c:87:5:gpio_get_value	0	static
+sunxi_gpio.c:92:5:gpio_set_value	8	static
+sunxi_gpio.c:97:5:sunxi_name_to_gpio	32	static
+sunxi_gpio.c:121:5:sunxi_name_to_gpio_bank	0	static

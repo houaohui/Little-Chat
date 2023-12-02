@@ -1,0 +1,3 @@
+of_extra.c:14:5:ofnode_read_fmap_entry	24	static
+of_extra.c:50:5:ofnode_decode_region	32	static
+of_extra.c:71:5:ofnode_decode_memory_region	104	static

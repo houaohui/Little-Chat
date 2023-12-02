@@ -1,0 +1,17 @@
+spi-nor-core.c:149:12:read_sr	24	static
+spi-nor-core.c:188:12:read_cr	24	static
+spi-nor-core.c:217:12:write_enable	16	static
+spi-nor-core.c:225:12:write_disable	16	static
+spi-nor-core.c:461:12:clean_bar	32	static
+spi-nor-core.c:474:12:write_bar	32	static
+spi-nor-core.c:909:12:spi_nor_read	40	static
+spi-nor-core.c:114:16:spi_nor_write_data	72	static
+spi-nor-core.c:76:16:spi_nor_read_data	88	static
+spi-nor-core.c:423:12:spi_nor_wait_till_ready_with_timeout.constprop	40	static
+spi-nor-core.c:51:12:spi_nor_read_reg	72	static
+spi-nor-core.c:66:12:spi_nor_write_reg	72	static
+spi-nor-core.c:1376:12:spansion_read_cr_quad_enable	32	static
+spi-nor-core.c:1305:12:macronix_quad_enable	24	static
+spi-nor-core.c:1231:12:spi_nor_write	64	static
+spi-nor-core.c:548:12:spi_nor_erase	80	static
+spi-nor-core.c:2479:5:spi_nor_scan	440	static

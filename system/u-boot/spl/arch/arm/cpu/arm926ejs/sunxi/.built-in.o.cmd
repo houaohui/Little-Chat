@@ -1,0 +1,1 @@
+cmd_spl/arch/arm/cpu/arm926ejs/sunxi/built-in.o :=  arm-linux-gnueabi-ld.bfd     -r -o spl/arch/arm/cpu/arm926ejs/sunxi/built-in.o spl/arch/arm/cpu/arm926ejs/sunxi/timer.o spl/arch/arm/cpu/arm926ejs/sunxi/lowlevel_init.o spl/arch/arm/cpu/arm926ejs/sunxi/fel_utils.o 

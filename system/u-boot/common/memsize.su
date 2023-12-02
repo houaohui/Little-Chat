@@ -1,0 +1,2 @@
+memsize.c:27:6:get_ram_size	168	static
+memsize.c:94:20:get_effective_memsize	4	static

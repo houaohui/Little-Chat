@@ -1,0 +1,3 @@
+clock.c:18:13:clock_init_sec	0	static
+clock.c:22:13:gtbus_init	0	static
+clock.c:26:5:clock_init	8	static

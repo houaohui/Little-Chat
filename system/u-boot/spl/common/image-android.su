@@ -1,0 +1,10 @@
+image-android.c:20:14:android_image_get_kernel_addr	8	static
+image-android.c:61:5:android_image_get_kernel	40	static
+image-android.c:124:5:android_image_check_header	8	static
+image-android.c:129:7:android_image_get_end	16	static
+image-android.c:152:7:android_image_get_kload	8	static
+image-android.c:157:7:android_image_get_kcomp	8	static
+image-android.c:169:5:android_image_get_ramdisk	24	static
+image-android.c:188:5:android_image_get_second	32	static
+image-android.c:226:6:android_image_get_dtbo	32	static
+image-android.c:327:6:android_image_get_dtb_by_index	40	static

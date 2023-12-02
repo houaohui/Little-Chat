@@ -1,0 +1,14 @@
+blk_legacy.c:59:12:get_desc	8	static
+blk_legacy.c:12:20:blk_driver_lookup_type	0	static
+blk_legacy.c:42:13:blk_get_if_type_name	8	static
+blk_legacy.c:74:5:blk_list_part	32	static
+blk_legacy.c:101:5:blk_print_part_devnum	16	static
+blk_legacy.c:119:6:blk_list_devices	24	static
+blk_legacy.c:137:5:blk_print_device_num	24	static
+blk_legacy.c:154:5:blk_show_device	24	static
+blk_legacy.c:179:18:blk_get_devnum_by_type	16	static
+blk_legacy.c:193:5:blk_dselect_hwpart	16	static
+blk_legacy.c:205:18:blk_get_devnum_by_typename	40	static
+blk_legacy.c:219:7:blk_read_devnum	24	static
+blk_legacy.c:239:7:blk_write_devnum	24	static
+blk_legacy.c:254:5:blk_select_hwpart_devnum	24	static

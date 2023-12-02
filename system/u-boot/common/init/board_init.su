@@ -1,0 +1,5 @@
+board_init.c:27:13:board_init_f_init_stack_protection_addr	0	static
+board_init.c:41:13:board_init_f_init_stack_protection	0	static
+board_init.c:77:7:board_init_f_alloc_reserve	0	static
+board_init.c:131:6:board_init_f_init_reserve	16	static
+board_init.c:171:13:show_boot_progress	0	static
